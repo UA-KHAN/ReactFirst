@@ -10,10 +10,12 @@ Features
 * Capitalized Case: Converts the text to capitalized case (first letter of each word is capitalized).
 * Reading Time Estimate: Estimates how long it would take to read the input text, based on an average reading speed.
 * Preview Text: Displays a preview of the text after the selected transformation has been applied.
+
 Technologies Used
 * React (for building the user interface)
 * JavaScript (for functionality)
 * CSS (for styling)
+
 How to Use
 * Enter your text in the text area.
 * Choose the desired transformation (uppercase, lowercase, etc.).
