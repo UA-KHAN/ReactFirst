@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { redirect } from "react-router-dom";
 
 export default function About() {
-    let myStyle ={
+    const [myStyle, setMystyle] = useState ({
         color: '#f8f9fa' ,
         backgroundColor: '#343a40'
+    })
+    const [btnText, setBtnText] = useState("Enable Light Mode")
+
+    const style = () =>{
+      if (myStyle.color == '#f8f9fa'){
+        setMystyle({
+          color: '#343a40',
+          backgroundColor: '#f8f9fa',
+          border: '1px solid white'
+        })
+        setBtnText("Enable Dark Mode")
+      }
+      else{
+        setMystyle({
+          color: '#f8f9fa' ,
+          backgroundColor: '#343a40'
+        })
+        setBtnText("Enable Light Mode")
+      }
     }
+
   return (
     <div className="container" style={myStyle}>
         <h1 className="my-3">About Us</h1>
@@ -104,6 +124,9 @@ export default function About() {
           </div>
         </div>
       </div>
+      <div className="container my -2">
+        <button onClick={style} className="btn btn-primary">{btnText}</button>     
+      </div>
     </div>
-  );
+  )
 }
